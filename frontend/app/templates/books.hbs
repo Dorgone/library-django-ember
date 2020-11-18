@@ -1,8 +1,16 @@
 <div class="book-list">
   {{#each model as |book|}}
-    <div class="book">
-      {{book.title}}
-    </div>
+    {{#link-to 'book' book.id class="book"}}
+      <div class="book">
+        {{book.title}}
+      </div>
+    {{/link-to}}
   {{/each}}
 </div>
-<!--{{outlet}}-->
+<div class="actions">
+  <button>
+  {{#link-to 'create-book' class='btn btn-addBook'}}
+    Add Book
+  {{/link-to}}
+  </button>
+</div>

@@ -163,10 +163,10 @@ REST_FRAMEWORK = { ##
     'TEST_REQUEST_DEFAULT_FORMAT': 'vnd.api+json',
 
     'DEFAULT_PERMISSION_CLASSES': [ ##
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        'rest_framework.permissions.AllowAny',
     ],
 }
-
 
 
 CORS_ORIGIN_ALLOW_ALL = DEBUG ##
